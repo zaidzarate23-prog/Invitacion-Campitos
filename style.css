@@ -1,0 +1,457 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+:root {
+    --cream: #f5f1e9;
+    --olive: #3f4937;
+    --dark: #20231d;
+    --gold: #a88b5a;
+    --light-gold: #d7c49d;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+section {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: clamp(42px, 11vw, 75px);
+    line-height: .95;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(20,25,18,.35),
+            rgba(20,25,18,.65)
+        ),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 30px;
+
+    max-width: 700px;
+}
+
+.small-title,
+.eyebrow {
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(80px, 22vw, 170px);
+    line-height: .65;
+    margin: 45px 0;
+}
+
+.hero h1 span {
+    display: block;
+
+    font-size: .35em;
+
+    color: var(--light-gold);
+
+    margin: 20px 0;
+}
+
+.date {
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+.invitation-text {
+    max-width: 400px;
+    margin: 35px auto;
+    font-size: 13px;
+}
+
+.open-button {
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    color: white;
+
+    padding: 16px 35px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.open-button:hover {
+    background: white;
+    color: var(--dark);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    padding: 110px 25px;
+
+    text-align: center;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.section h2 {
+    margin: 30px auto;
+}
+
+.section > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.eyebrow {
+    color: var(--gold);
+}
+
+.ornament {
+    color: var(--gold);
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
+
+.countdown-section {
+    background: var(--olive);
+    color: white;
+    max-width: none;
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    min-width: 80px;
+}
+
+.countdown span {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+
+    color: var(--light-gold);
+}
+
+.countdown small {
+    letter-spacing: 2px;
+    font-size: 9px;
+}
+
+
+/* =========================
+   EVENTO
+========================= */
+
+.event-section {
+    max-width: none;
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(250px, 350px));
+
+    justify-content: center;
+
+    gap: 40px;
+
+    margin: 60px 0;
+}
+
+.event-card {
+    padding: 40px 20px;
+
+    border-top: 1px solid var(--light-gold);
+    border-bottom: 1px solid var(--light-gold);
+}
+
+.event-icon {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.event-card h3 {
+    margin: 15px 0;
+
+    letter-spacing: 3px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+}
+
+.time {
+    color: var(--gold);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.gold-button {
+    display: inline-block;
+
+    background: var(--olive);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 17px 35px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: .3s;
+}
+
+.gold-button:hover {
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    background: transparent;
+
+    border: 1px solid var(--gold);
+
+    padding: 17px 35px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   DRESS CODE
+========================= */
+
+.dress-code {
+    background: #ebe5d8;
+
+    max-width: none;
+}
+
+
+/* =========================
+   HISTORIA
+========================= */
+
+.story {
+    max-width: 800px;
+}
+
+.story-line {
+    margin-top: 70px;
+}
+
+.story-line div {
+    padding: 30px;
+
+    border-left: 1px solid var(--light-gold);
+
+    text-align: left;
+
+    margin-left: 20px;
+}
+
+.story-line span {
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery {
+    max-width: 1100px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 60px;
+}
+
+.photo {
+    min-height: 350px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.photo-one {
+    background-image:
+        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80");
+}
+
+.photo-two {
+    background-image:
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80");
+}
+
+.photo-three {
+    background-image:
+        url("https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=80");
+}
+
+.photo-four {
+    background-image:
+        url("https://images.unsplash.com/photo-1460364157752-9262d6abe9e1?auto=format&fit=crop&w=800&q=80");
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+    background: var(--olive);
+    color: white;
+
+    max-width: none;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 25px;
+
+    background: #e9e2d4;
+}
+
+.final-section h2 {
+    margin: 25px 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 90px;
+    }
+
+}
